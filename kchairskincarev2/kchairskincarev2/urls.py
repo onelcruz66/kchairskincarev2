@@ -21,6 +21,5 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('kchairskincarev2_app.urls')),
-    path('about/', include('kchairskincarev2_app.urls')),
 ]
 

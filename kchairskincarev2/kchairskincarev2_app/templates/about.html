@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Perukar Barber Shop</title>
-    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="shortcut icon" href="/static/img/favicon.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="css/plugins.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/static/css/plugins.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
 </head>
 <body>
     <!-- Preloader -->
@@ -29,7 +29,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper">
-                <a class="logo" href="index.html"> <img src="img/logo.png" class="logo-img" alt=""> </a>
+                <a class="logo" href="{% url 'home' %}"> <img src="/static/img/logo.png" class="logo-img" alt=""> </a>
                 <!-- <a class="logo" href="index.html"> <h2>Perukar <span>Barber Shop</span></h2> </a> -->
             </div>
             <!-- Button -->
@@ -37,8 +37,8 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="ti-angle-down"></i></a>
@@ -72,7 +72,7 @@
         </div>
     </nav>
     <!-- Header Banner -->
-    <div class="banner-header valign bg-img bg-fixed" data-overlay-dark="4" data-background="img/slider/1.jpg">
+    <div class="banner-header valign bg-img bg-fixed" data-overlay-dark="4" data-background="/static/img/slider/1.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center caption mt-60">
@@ -114,8 +114,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col col-md-3"> <img src="img/about2.jpg" alt="" class="mt-90 mb-30"> </div>
-                <div class="col col-md-3"> <img src="img/about.jpg" alt=""> </div>
+                <div class="col col-md-3"> <img src="/static/img/about2.jpg" alt="" class="mt-90 mb-30"> </div>
+                <div class="col col-md-3"> <img src="/static/img/about.jpg" alt=""> </div>
             </div>
         </div>
     </section>
@@ -154,7 +154,7 @@
     <section class="about section-padding bg-darkbrown">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInLeft"> <img src="img/about3.jpg" alt=""> </div>
+                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInLeft"> <img src="/static/img/about3.jpg" alt=""> </div>
                 <div class="col-md-7 valign mb-30 animate-box" data-animate-effect="fadeInRight">
                     <div class="row">
                         <div class="col-md-12">
@@ -163,7 +163,7 @@
                                 <div class="section-title white">Making people look awesome since 2006</div>
                             </div>
                             <p>Come experience a unique and edgy barbershop for all your hair and beard needs. Vulputate ons amet ravida haretra nuam the drana miss uctus enec accumsan justo aliquam sit amet auctor orci done vitae risus duise nunc sapien.</p>
-                            <div class="about-bottom"> <img src="img/signature.svg" alt="" class="image about-signature">
+                            <div class="about-bottom"> <img src="/static/img/signature.svg" alt="" class="image about-signature">
                                 <div class="about-name-wrapper">
                                     <div class="about-rol">Barber, Founder</div>
                                     <div class="about-name">Harold Brown</div>
@@ -176,7 +176,7 @@
         </div>
     </section>
     <!-- Video -->
-    <section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="4" data-background="img/slider/5.jpg">
+    <section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="4" data-background="/static/img/slider/5.jpg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -209,7 +209,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b1.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b1.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Philip Brown<span>Barber</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b2.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b2.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Stephen Martin<span>Stylist</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -235,7 +235,7 @@
                             </div>
                         </div>
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b3.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b3.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Dennis Dan<span>Barber</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -248,7 +248,7 @@
                             </div>
                         </div>
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b4.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b4.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Helen Brown<span>Barber</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -344,23 +344,23 @@
         </div>
     </footer>
     <!-- jQuery -->
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="/static/js/jquery-3.6.3.min.js"></script>
+    <script src="/static/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/jquery.isotope.v3.0.2.js"></script>
     
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scrollIt.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/YouTubePopUp.js"></script>
-    <script src="js/select2.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/scrollIt.min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.js"></script>
+    <script src="/static/js/YouTubePopUp.js"></script>
+    <script src="/static/js/select2.js"></script>
+    <script src="/static/js/datepicker.js"></script>
+    <script src="/static/js/smooth-scroll.min.js"></script>
+    <script src="/static/js/custom.js"></script>
 </body>
 </html>

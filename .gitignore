@@ -1,2 +1,5 @@
 /venv/*
 /kchairskincarev2/temp
+/kchairskincarev2/kchairskincarev2_app/__pycache__
+/kchairskincarev2/kchairskincarev2_app/__pycache__/*
+/kchairskincarev2/kchairskincarev2/__pycache__/*

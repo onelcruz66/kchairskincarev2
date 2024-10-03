@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Perukar Barber Shop</title>
-    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="shortcut icon" href="/static/img/favicon.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="css/plugins.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/static/css/plugins.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
 </head>
 <body>
     <!-- Preloader -->
@@ -29,7 +29,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper">
-                <a class="logo" href="index.html"> <img src="img/logo.png" class="logo-img" alt=""> </a>
+                <a class="logo" href="{% url 'home' %}"> <img src="/static/img/logo.png" class="logo-img" alt=""> </a>
                 <!-- <a class="logo" href="index.html"> <h2>Perukar <span>Barber Shop</span></h2> </a> -->
             </div>
             <!-- Button -->
@@ -37,8 +37,8 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="ti-angle-down"></i></a>
@@ -75,7 +75,7 @@
     <header class="header slider-fade">
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="item bg-img" data-overlay-dark="5" data-background="img/slider/2.jpg">
+            <div class="item bg-img" data-overlay-dark="5" data-background="/static/img/slider/2.jpg">
                 <div class="v-middle caption">
                    <div class="container">
                         <div class="row justify-content-center">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item bg-img" data-overlay-dark="5" data-background="img/slider/22.jpg">
+            <div class="item bg-img" data-overlay-dark="5" data-background="/static/img/slider/22.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item bg-img" data-overlay-dark="5" data-background="img/slider/3.jpg">
+            <div class="item bg-img" data-overlay-dark="5" data-background="/static/img/slider/3.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -151,8 +151,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="img/about2.jpg" alt="" class="mt-90 mb-30"> </div>
-                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="img/about.jpg" alt=""> </div>
+                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="/static/img/about2.jpg" alt="" class="mt-90 mb-30"> </div>
+                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="/static/img/about.jpg" alt=""> </div>
             </div>
         </div>
     </section>
@@ -191,7 +191,7 @@
     <section class="about section-padding bg-darkbrown">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInLeft"> <img src="img/about3.jpg" alt=""> </div>
+                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInLeft"> <img src="/static/img/about3.jpg" alt=""> </div>
                 <div class="col-md-7 valign mb-30 animate-box" data-animate-effect="fadeInRight">
                     <div class="row">
                         <div class="col-md-12">
@@ -200,7 +200,7 @@
                                 <div class="section-title white">Making people look awesome since 2006</div>
                             </div>
                             <p>Come experience a unique and edgy barbershop for all your hair and beard needs. Vulputate ons amet ravida haretra nuam the drana miss uctus enec accumsan justo aliquam sit amet auctor orci done vitae risus duise nunc sapien.</p>
-                            <div class="about-bottom"> <img src="img/signature.svg" alt="" class="image about-signature">
+                            <div class="about-bottom"> <img src="/static/img/signature.svg" alt="" class="image about-signature">
                                 <div class="about-name-wrapper">
                                     <div class="about-rol">Barber, Founder</div>
                                     <div class="about-name">Harold Brown</div>
@@ -226,7 +226,7 @@
             <div class="row">
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/2.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"> <img src="/static/img/services/2.jpg" alt=""> </div>
                         <div class="con">
                             <div class="icon icon-icon-1-6"></div>
                             <h5>Hair Cut</h5>
@@ -242,7 +242,7 @@
                 </div>
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/1.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"> <img src="/static/img/services/1.jpg" alt=""> </div>
                         <div class="con">
                             <div class="icon icon-icon-1-1"></div>
                             <h5>Beard Trim</h5>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/3.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"> <img src="/static/img/services/3.jpg" alt=""> </div>
                         <div class="con">
                             <div class="icon icon-icon-1-4"></div>
                             <h5>Hair Wash</h5>
@@ -276,7 +276,7 @@
         </div>
     </section>
     <!-- Testimonials -->
-    <section class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/6.jpg" data-overlay-dark="4">
+    <section class="background bg-img bg-fixed section-padding pb-0" data-background="/static/img/slider/6.jpg" data-overlay-dark="4">
         <div class="container">
             <div class="row">
                 <!-- Testimonials -->
@@ -293,7 +293,7 @@
                                     </span>
                                     <p>Lorem dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante viventa miss sapien silver on the duiman lorem ipsum amet silver miss rana duru at finibus viverra neca the sene on satien.</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="img/team/1.jpg" alt=""> </div>
+                                        <div class="author-img"> <img src="/static/img/team/1.jpg" alt=""> </div>
                                         <div class="cont">
                                             <h6>Andreas Brown</h6> <span>Customer review</span>
                                         </div>
@@ -308,7 +308,7 @@
                                     </span>
                                     <p>Lorem dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante viventa miss sapien silver on the duiman lorem ipsum amet silver miss rana duru at finibus viverra neca the sene on satien.</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="img/team/2.jpg" alt=""> </div>
+                                        <div class="author-img"> <img src="/static/img/team/2.jpg" alt=""> </div>
                                         <div class="cont">
                                             <h6>Emily White</h6> <span>Customer review</span>
                                         </div>
@@ -323,7 +323,7 @@
                                     </span>
                                     <p>Lorem dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante viventa miss sapien silver on the duiman lorem ipsum amet silver miss rana duru at finibus viverra neca the sene on satien.</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="img/team/3.jpg" alt=""> </div>
+                                        <div class="author-img"> <img src="/static/img/team/3.jpg" alt=""> </div>
                                         <div class="cont">
                                             <h6>Daniel Martin</h6> <span>Customer review</span>
                                         </div>
@@ -350,7 +350,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="square-flip">
-                        <div class="square bg-img" data-background="img/barber.jpg">
+                        <div class="square bg-img" data-background="/static/img/barber.jpg">
                             <div class="square-container d-flex align-items-end justify-content-end">
                                 <div class="box-title">
                                     <h4>Groom's Shave</h4>
@@ -368,7 +368,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="square-flip">
-                        <div class="square bg-img" data-background="img/kids.jpg">
+                        <div class="square bg-img" data-background="/static/img/kids.jpg">
                             <div class="square-container d-flex align-items-end justify-content-end">
                                 <div class="box-title">
                                     <h4>Kids Cuts</h4>
@@ -386,7 +386,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="square-flip">
-                        <div class="square bg-img" data-background="img/team/b3.jpg">
+                        <div class="square bg-img" data-background="/static/img/team/b3.jpg">
                             <div class="square-container d-flex align-items-end justify-content-end">
                                 <div class="box-title">
                                     <h4>Creative Barbers</h4>
@@ -406,7 +406,7 @@
         </div>
     </div>
     <!-- Video -->
-    <section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="4" data-background="img/slider/5.jpg">
+    <section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="4" data-background="/static/img/slider/5.jpg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -538,7 +538,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b1.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b1.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Philip Brown<span>Barber</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -551,7 +551,7 @@
                             </div>
                         </div>
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b2.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b2.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Stephen Martin<span>Stylist</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -564,7 +564,7 @@
                             </div>
                         </div>
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b3.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b3.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Dennis Dan<span>Barber</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -577,7 +577,7 @@
                             </div>
                         </div>
                         <div class="team-card mb-30">
-                            <div class="team-img"><img src="img/team/b4.jpg" alt="" class="w-100"></div>
+                            <div class="team-img"><img src="/static/img/team/b4.jpg" alt="" class="w-100"></div>
                             <div class="team-content">
                                 <h3 class="team-title">Helen Brown<span>Barber</span></h3>
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
@@ -678,7 +678,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="img/slider/8.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="/static/img/slider/8.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>29</i> </a>
                                 </div>
@@ -690,7 +690,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="img/slider/9.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="/static/img/slider/9.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>27</i> </a>
                                 </div>
@@ -702,7 +702,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="img/slider/6.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="/static/img/slider/6.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>25</i> </a>
                                 </div>
@@ -714,7 +714,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="img/slider/4.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="/static/img/slider/4.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>23</i> </a>
                                 </div>
@@ -726,7 +726,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="img/slider/16.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="/static/img/slider/16.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>22</i> </a>
                                 </div>
@@ -738,7 +738,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="img/slider/19.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="/static/img/slider/19.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>20</i> </a>
                                 </div>
@@ -756,7 +756,7 @@
     </section>
     <!-- Appointment Form -->
     <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/20.jpg" data-overlay-dark="6">
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="/static/img/slider/20.jpg" data-overlay-dark="6">
             <div class="container">
                 <div class="row">
                     <!-- Appointment call -->
@@ -868,19 +868,19 @@
                 <div class="col-md-7">
                     <div class="owl-carousel owl-theme">
                         <div class="clients-logo">
-                            <a href="#0"><img src="img/clients/2.png" alt=""></a>
+                            <a href="#0"><img src="/static/img/clients/2.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="img/clients/3.png" alt=""></a>
+                            <a href="#0"><img src="/static/img/clients/3.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="img/clients/4.png" alt=""></a>
+                            <a href="#0"><img src="/static/img/clients/4.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="img/clients/5.png" alt=""></a>
+                            <a href="#0"><img src="/static/img/clients/5.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="img/clients/6.png" alt=""></a>
+                            <a href="#0"><img src="/static/img/clients/6.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -966,23 +966,23 @@
         </div>
     </footer>
     <!-- jQuery -->
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="/static/js/jquery-3.6.3.min.js"></script>
+    <script src="/static/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/jquery.isotope.v3.0.2.js"></script>
     
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scrollIt.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/YouTubePopUp.js"></script>
-    <script src="js/select2.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/scrollIt.min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.js"></script>
+    <script src="/static/js/YouTubePopUp.js"></script>
+    <script src="/static/js/select2.js"></script>
+    <script src="/static/js/datepicker.js"></script>
+    <script src="/static/js/smooth-scroll.min.js"></script>
+    <script src="/static/js/custom.js"></script>
 </body>
 </html>
