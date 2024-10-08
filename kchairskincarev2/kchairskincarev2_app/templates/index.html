@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Perukar Barber Shop</title>
+    <title>KC Hair And Skincare</title>
     <link rel="shortcut icon" href="/static/img/favicon.png" />
+    <link rel="shortcut icon" href="/static/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
     <link rel="stylesheet" href="/static/css/plugins.css" />
     <link rel="stylesheet" href="/static/css/style.css" />
@@ -29,7 +35,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper">
-                <a class="logo" href="{% url 'home' %}"> <img src="/static/img/logo.png" class="logo-img" alt=""> </a>
+                <a class="logo" href="{% url 'home' %}"> <img src="/static/img/kchairskincare_main.jpg" class="logo-img" alt=""> </a>
                 <!-- <a class="logo" href="index.html"> <h2>Perukar <span>Barber Shop</span></h2> </a> -->
             </div>
             <!-- Button -->
@@ -39,18 +45,18 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'pricing' %}">Pricing</a></li>
                     <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="ti-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="portfolio.html" class="dropdown-item"><span>Portfolio</span></a></li>
-                            <li><a href="team.html" class="dropdown-item"><span>Team</span></a></li>
-                            <li><a href="faq.html" class="dropdown-item"><span>Faq</span></a></li>
-                            <li><a href="services-page.html" class="dropdown-item"><span>Services Page</span></a></li>
-                            <li><a href="team-details.html" class="dropdown-item"><span>Team Details</span></a></li>
-                            <li><a href="post.html" class="dropdown-item"><span>Post Single</span></a></li>
-                            <li><a href="404.html" class="dropdown-item"><span>404</span></a></li>
-                            <li><a href="coming-soon.html" class="dropdown-item"><span>Coming Soon</span></a></li>
+                            <li><a href="{% url 'portfolio' %}" class="dropdown-item"><span>Portfolio</span></a></li>
+                            <li><a href="{% url 'team' %}" class="dropdown-item"><span>Team</span></a></li>
+                            <li><a href="{% url 'faq' %}" class="dropdown-item"><span>Faq</span></a></li>
+                            <li><a href="{% url 'services_page' %}" class="dropdown-item"><span>Services Page</span></a></li>
+                            <li><a href="{% url 'team_details' %}" class="dropdown-item"><span>Team Details</span></a></li>
+                            <li><a href="{% url 'post' %}" class="dropdown-item"><span>Post Single</span></a></li>
+                            <li><a href="{% url 'error_404' %}" class="dropdown-item"><span>404</span></a></li>
+                            <li><a href="{% url 'coming_soon' %}" class="dropdown-item"><span>Coming Soon</span></a></li>
                             <li class="dropdown-submenu dropdown"> <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" href="#"><span>Sub Menu <i class="ti-angle-right"></i></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="dropdown-item"><span>Dropdown</span></a></li>
@@ -61,12 +67,12 @@
                     </li>
                     <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Blog <i class="ti-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog.html" class="dropdown-item"><span>Blog 01</span></a></li>
-                            <li><a href="blog2.html" class="dropdown-item"><span>Blog 02</span></a></li>
-                            <li><a href="blog3.html" class="dropdown-item"><span>Blog 03</span></a></li>
+                            <li><a href="{% url 'blog' %}" class="dropdown-item"><span>Blog 01</span></a></li>
+                            <li><a href="{% url 'blog2' %}" class="dropdown-item"><span>Blog 02</span></a></li>
+                            <li><a href="{% url 'blog3' %}" class="dropdown-item"><span>Blog 03</span></a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -80,9 +86,9 @@
                    <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8 text-center"> 
-                                <h6>Stay sharp, Look good</h6>
-                                <h1>Not Just A Barbers, But A Lifestyle</h1> 
-                                <h4>Broadway St, NYC. Appointment: 855 100 4444</h4> 
+                                <h6>Haven for sharp looks and smooth vibes.</h6>
+                                <h1>KC Hair & Skincare</h1> 
+                                <h4>Call 939-323-4537 or click below to schedule an appointment</h4> 
                                 <a href="#" class="button-1 mt-30">Make Appointment<span></span></a>
                             </div>
                         </div>
@@ -94,9 +100,8 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8 text-center"> 
-                                <h6>Established 2006</h6>
-                                <h1>Barber Shop You Will Every Need</h1> 
-                                <h4>Broadway St, NYC. Appointment: 855 100 4444</h4> 
+                                <h6>Established 2022</h6>
+                                <h1>Only Barber Shop You Need</h1> 
                                 <a href="#" class="button-1 mt-30">Make Appointment<span></span></a>
                             </div>
                         </div>
@@ -108,9 +113,8 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8 text-center"> 
-                                <h6>Stay sharp, Look good</h6>
-                                <h1>Get Your Style Your Deserve </h1> 
-                                <h4>Broadway St, NYC. Appointment: 855 100 4444</h4> 
+                                <h1>Come Visit Us At</h1> 
+                                <h4>Ventana Al Mar, Rincon, Puerto Rico, 00677</h4> 
                                 <a href="#" class="button-1 mt-30">Make Appointment<span></span></a>
                             </div>
                         </div>
@@ -125,8 +129,8 @@
             <div class="row">
                 <div class="col-md-6 mb-30">
                     <div class="section-head mb-20">
-                        <div class="section-subtitle">Since 2006</div>
-                        <div class="section-title">Perukar Barber Shop</div>
+                        <div class="section-subtitle">Since 2022</div>
+                        <div class="section-title">KC Hair & Skincare</div>
                     </div>
                     <p>Come experience a unique and edgy barbershop for all your hair and beard needs. ravida haretra nuam enim mi obortis eset uctus enec accumsan eu justo alisuame amet auctor orci donec vitae vehicula risus.</p>
                     <p>Barber utate ons amet ravida haretra nuam the duru miss uctus the drana accumsan justo aliquam sit amet auctor orci done vitae risus duise nisan sapien silver on the accumsan id mauris apien.</p>
@@ -397,7 +401,7 @@
                         <div class="square2">
                             <div class="square-container2">
                                 <h4>Creative Barbers</h4>
-                                <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="team.html" class="button-2 mt-15">Our Team<span></span></a>
+                                <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="{% url 'team' %}" class="button-2 mt-15">Our Team<span></span></a>
                             </div>
                         </div>
                     </div>
@@ -544,7 +548,7 @@
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
                                 <div class="social">
                                     <div class="full-width"> <a href="#"><i class="ti-linkedin"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-instagram"></i></a> </div>
-                                </div> <a href="team-details.html" class="button-1 mt-15">Team Details<span></span></a>
+                                </div> <a href="{% url 'team_details' %}" class="button-1 mt-15">Team Details<span></span></a>
                             </div>
                             <div class="title-box">
                                 <h3 class="mb-0">Philip Brown<span>Barber</span></h3>
@@ -557,7 +561,7 @@
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
                                 <div class="social">
                                     <div class="full-width"> <a href="#"><i class="ti-linkedin"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-instagram"></i></a> </div>
-                                </div> <a href="team-details.html" class="button-1 mt-15">Team Details<span></span></a>
+                                </div> <a href="{% url 'team_details' %}" class="button-1 mt-15">Team Details<span></span></a>
                             </div>
                             <div class="title-box">
                                 <h3 class="mb-0">Stephen Martin<span>Stylist</span></h3>
@@ -570,7 +574,7 @@
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
                                 <div class="social">
                                     <div class="full-width"> <a href="#"><i class="ti-linkedin"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-instagram"></i></a> </div>
-                                </div> <a href="team-details.html" class="button-1 mt-15">Team Details<span></span></a>
+                                </div> <a href="{% url 'team_details' %}" class="button-1 mt-15">Team Details<span></span></a>
                             </div>
                             <div class="title-box">
                                 <h3 class="mb-0">Dennis Dan<span>Barber</span></h3>
@@ -583,7 +587,7 @@
                                 <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
                                 <div class="social">
                                     <div class="full-width"> <a href="#"><i class="ti-linkedin"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-instagram"></i></a> </div>
-                                </div> <a href="team-details.html" class="button-1 mt-15">Team Details<span></span></a>
+                                </div> <a href="{% url 'team_details' %}" class="button-1 mt-15">Team Details<span></span></a>
                             </div>
                             <div class="title-box">
                                 <h3 class="mb-0">Helen Brown<span>Barber</span></h3>
@@ -608,7 +612,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="services-page.html"> <span class="icon icon-icon-1-1"></span>
+                        <a href="{% url 'services_page' %}"> <span class="icon icon-icon-1-1"></span>
                             <h5>Moustache Trim</h5>
                             <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
                             <div class="shape"> <span class="icon icon-icon-1-1"></span> </div>
@@ -617,7 +621,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="services-page.html"> <span class="icon icon-icon-1-9"></span>
+                        <a href="{% url 'services_page' %}"> <span class="icon icon-icon-1-9"></span>
                             <h5>Face Shave</h5>
                             <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
                             <div class="shape"> <span class="icon icon-icon-1-9"></span> </div>
@@ -626,7 +630,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="services-page.html"> <span class="icon icon-icon-1-3"></span>
+                        <a href="{% url 'services_page' %}"> <span class="icon icon-icon-1-3"></span>
                             <h5>Beard Trim</h5>
                             <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
                             <div class="shape"> <span class="icon icon-icon-1-3"></span> </div>
@@ -635,7 +639,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="services-page.html"> <span class="icon icon-icon-1-2"></span>
+                        <a href="{% url 'services_page' %}"> <span class="icon icon-icon-1-2"></span>
                             <h5>Haircut</h5>
                             <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
                             <div class="shape"> <span class="icon icon-icon-1-2"></span> </div>
@@ -644,7 +648,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="services-page.html"> <span class="icon icon-icon-1-6"></span>
+                        <a href="{% url 'services_page' %}"> <span class="icon icon-icon-1-6"></span>
                             <h5>Clipper Cut</h5>
                             <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
                             <div class="shape"> <span class="icon icon-icon-1-6"></span> </div>
@@ -653,7 +657,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="services-page.html"> <span class="icon icon-icon-1-8"></span>
+                        <a href="{% url 'services_page' %}"> <span class="icon icon-icon-1-8"></span>
                             <h5>Facial & Massage</h5>
                             <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
                             <div class="shape"> <span class="icon icon-icon-1-8"></span> </div>
@@ -680,73 +684,73 @@
                         <div class="item">
                             <div class="position-re o-hidden"> <img src="/static/img/slider/8.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>29</i> </a>
+                                    <a href="{% url 'post' %}"> <span>Dec</span> <i>29</i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="blog.html">Hair Care</a>
+                                    <a href="{% url 'blog' %}">Hair Care</a>
                                 </span>
-                                <h5><a href="post.html">Women's Hair Care Routine for Any Hair Type</a></h5>
+                                <h5><a href="{% url 'post' %}">Women's Hair Care Routine for Any Hair Type</a></h5>
                             </div>
                         </div>
                         <div class="item">
                             <div class="position-re o-hidden"> <img src="/static/img/slider/9.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>27</i> </a>
+                                    <a href="{% url 'post' %}"> <span>Dec</span> <i>27</i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="blog.html">Beard</a>
+                                    <a href="{% url 'blog' %}">Beard</a>
                                 </span>
-                                <h5><a href="post.html">Common Mistakes That Damage Your Beard</a></h5>
+                                <h5><a href="{% url 'post' %}">Common Mistakes That Damage Your Beard</a></h5>
                             </div>
                         </div>
                         <div class="item">
                             <div class="position-re o-hidden"> <img src="/static/img/slider/6.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>25</i> </a>
+                                    <a href="{% url 'post' %}"> <span>Dec</span> <i>25</i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="blog.html">Hairstyle</a>
+                                    <a href="{% url 'blog' %}">Hairstyle</a>
                                 </span>
-                                <h5><a href="post.html">5 Most Iconic Men’s Hairstyles Of All Times</a></h5>
+                                <h5><a href="{% url 'post' %}">5 Most Iconic Men’s Hairstyles Of All Times</a></h5>
                             </div>
                         </div>
                         <div class="item">
                             <div class="position-re o-hidden"> <img src="/static/img/slider/4.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>23</i> </a>
+                                    <a href="{% url 'post' %}"> <span>Dec</span> <i>23</i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="blog.html">Haircut</a>
+                                    <a href="{% url 'blog' %}">Haircut</a>
                                 </span>
-                                <h5><a href="post.html">What Are The Secrets of The Haircut & Moustache Trim?</a></h5>
+                                <h5><a href="{% url 'post' %}">What Are The Secrets of The Haircut & Moustache Trim?</a></h5>
                             </div>
                         </div>
                         <div class="item">
                             <div class="position-re o-hidden"> <img src="/static/img/slider/16.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>22</i> </a>
+                                    <a href="{% url 'post' %}"> <span>Dec</span> <i>22</i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="blog.html">Wedding</a>
+                                    <a href="{% url 'blog' %}">Wedding</a>
                                 </span>
-                                <h5><a href="post.html">Best Tips for Groom Shaving for Your Wedding</a></h5>
+                                <h5><a href="{% url 'post' %}">Best Tips for Groom Shaving for Your Wedding</a></h5>
                             </div>
                         </div>
                         <div class="item">
                             <div class="position-re o-hidden"> <img src="/static/img/slider/19.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>20</i> </a>
+                                    <a href="{% url 'post' %}"> <span>Dec</span> <i>20</i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="blog.html">Blog</a>
+                                    <a href="{% url 'blog' %}">Blog</a>
                                 </span>
-                                <h5><a href="post.html">What We Need to Choose The Fashion Model?</a></h5>
+                                <h5><a href="{% url 'post' %}">What We Need to Choose The Fashion Model?</a></h5>
                             </div>
                         </div>
                     </div>
@@ -895,11 +899,11 @@
                     <div class="col-md-3">
                         <div class="footer-column footer-contact">
                             <h3 class="footer-title">Contact</h3>
-                            <p class="footer-contact-text">0665 Broadway NY, New York 10001
-                                <br>United States of America
+                            <p class="footer-contact-text">Ventana Al Mar
+                                <br>Rincon, Puerto Rico, 00677
                             </p>
                             <div class="footer-contact-info">
-                                <p class="footer-contact-phone">855 100 4444</p>
+                                <p class="footer-contact-phone">939-323-4537</p>
                                 <p class="footer-contact-mail">info@barber.com</p>
                             </div>
                             <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-pinterest"></i></a> </div>
@@ -958,7 +962,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer-bottom-inner">
-                            <p class="footer-bottom-copy-right">2023 © All rights reserved. Designed by <a href="https://1.envato.market/DuruThemes" target="_blank">DuruThemes</a></p>
+                            <p class="footer-bottom-copy-right">2022 © All rights reserved. KC Hair & Skincare</p>
                         </div>
                     </div>
                 </div>
