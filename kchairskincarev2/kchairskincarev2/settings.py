@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kchairskincarev2_app.apps.Kchairskincarev2AppConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
