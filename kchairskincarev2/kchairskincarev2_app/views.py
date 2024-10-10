@@ -1,9 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import AppointmentRequest
+from kchairskincarev2_app.forms import AppointmentForm
 
 # Create your views here.
 def home(request):
     context = {}
+
+    if request.method == "POST":
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(request.path)
+    else:
+        # Render the form for GET requests
+        form = AppointmentForm()
+
+    context['form'] = form
+    
     return render(request, "index.html", context)
 
 def about(request):
