@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import AppointmentRequest
-from kchairskincarev2_app.forms import AppointmentForm
+from .models import AppointmentRequest, MessageRequest
+from kchairskincarev2_app.forms import AppointmentForm, ContactForm
 
 # Create your views here.
 def home(request):
@@ -26,10 +26,34 @@ def about(request):
 
 def services(request):
     context = {}
+
+    if request.method == "POST":
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(request.path)
+    else:
+        # Render the form for GET requests
+        form = AppointmentForm()
+
+    context['form'] = form
+
     return render(request, 'services.html', context)
 
 def pricing(request):
     context = {}
+
+    if request.method == "POST":
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(request.path)
+    else:
+        # Render the form for GET requests
+        form = AppointmentForm()
+
+    context['form'] = form
+
     return render(request, 'pricing.html', context)
 
 def portfolio(request):
@@ -78,4 +102,16 @@ def blog3(request):
 
 def contact(request):
     context = {}
+
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(request.path)
+    else:
+        # Render the form for GET requests
+        form = ContactForm()
+
+    context['form'] = form
+
     return render(request, 'contact.html', context)

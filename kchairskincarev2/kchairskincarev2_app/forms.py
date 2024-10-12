@@ -1,5 +1,5 @@
 from django import forms
-from kchairskincarev2_app.models import AppointmentRequest
+from kchairskincarev2_app.models import AppointmentRequest, MessageRequest
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
@@ -32,5 +32,10 @@ class AppointmentForm(forms.ModelForm):
         barber_name = forms.ChoiceField(
             choices=[
                 ('Kamji', 'Kamji'), 
-                ('Stephen', 'Stephen'), 
-                ('Helen', 'Helen')])
+                ('Joel', 'Joel'), 
+                ('Katiria', 'Katiria')])
+        
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = MessageRequest
+        fields = ['name', 'phone_number', 'email_address', 'subject', 'question']

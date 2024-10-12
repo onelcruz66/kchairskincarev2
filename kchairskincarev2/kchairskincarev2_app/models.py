@@ -22,8 +22,8 @@ class ServiceType(models.TextChoices):
 
 class BarberName(models.TextChoices):
     KAMJI = 'Kamji', _('Kamji')
-    STEPHEN = 'Stephen', _('Stephen')
-    HELEN = 'Helen', _('Helen')
+    STEPHEN = 'Joel', _('Joel')
+    HELEN = 'Katiria', _('Katiria')
 
 class AppointmentRequest(models.Model):
     name = models.CharField(max_length=80, null=False, blank=False)
@@ -32,3 +32,10 @@ class AppointmentRequest(models.Model):
     time_requested = models.CharField(max_length=50, choices=HourSelected.choices, default='')
     service_type = models.CharField(max_length=50, choices=ServiceType.choices, default='')
     barber_name = models.CharField(max_length=50, choices=BarberName.choices, default='')
+
+class MessageRequest(models.Model):
+    name = models.CharField(max_length=80, null=False, blank=False)
+    phone_number = models.CharField(max_length=50, blank=False, default='')
+    email_address = models.CharField(max_length=50, blank=False, default='')
+    subject = models.CharField(max_length=80, null=False, blank=False)
+    question = models.TextField(max_length=200, null=False, blank=False)

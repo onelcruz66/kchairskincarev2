@@ -162,11 +162,11 @@
                     <!-- Appointment call -->
                     <div class="col-md-5 mb-30 mt-60">
                         <p class="mb-0"><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></p>
-                        <h5>We Are Best Barbers & Hair Cutting Salon at NYC.</h5>
+                        <h5>We Are The Best Barbers in Rincon, Puerto Rico</h5>
                         <div class="reservations mb-10">
                             <div class="icon color-1"><span class="icon-icon-1-1"></span></div>
                             <div class="text">
-                                <p class="color-1">Appointment</p> <a class="color-1" href="tel:855-100-4444">855 100 4444</a>
+                                <p class="color-1">Appointment</p> <a class="color-1" href="tel:939-323-4537">939-323-4537</a>
                             </div>
                         </div>
                     </div>
@@ -176,14 +176,16 @@
                             <div class="head-box text-center">
                                 <h4>Make An Appointment</h4>
                             </div>
+
                             <div class="booking-inner clearfix">
-                                <form class="form1 clearfix">
+                                <form action="{% url 'home' %}" method="POST" class="form1 clearfix">
+                                    {% csrf_token %}
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <label>Name</label>
                                                 <div class="input2_inner">
-                                                    <input type="text" class="form-control input" placeholder="Name" required>
+                                                    <input type="text" name="name" class="form-control input" placeholder="Name" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,7 +193,7 @@
                                             <div class="input1_wrapper">
                                                 <label>Phone</label>
                                                 <div class="input2_inner">
-                                                    <input type="text" class="form-control input" placeholder="Phone" required>
+                                                    <input type="text" name="phone_number" class="form-control input" placeholder="Phone" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,7 +201,7 @@
                                             <div class="input1_wrapper">
                                                 <label>Date</label>
                                                 <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker" placeholder="Date" required>
+                                                    <input type="text" name="date_requested" class="form-control input datepicker" placeholder="Date" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -207,15 +209,16 @@
                                             <div class="select1_wrapper">
                                                 <label>Time</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Time</option>
-                                                        <option value="1">10:00 am</option>
-                                                        <option value="2">11:00 am</option>
-                                                        <option value="3">12:00 pm</option>
-                                                        <option value="4">14:00 pm</option>
-                                                        <option value="5">16:00 pm</option>
-                                                        <option value="6">18:00 pm</option>
-                                                        <option value="7">20:00 pm</option>
+                                                    <select class="select2 select" style="width: 100%" name="time_requested">
+                                                        <option value="9:00">9:00 am</option>
+                                                        <option value="10:00">10:00 am</option>
+                                                        <option value="11:00">11:00 am</option>
+                                                        <option value="12:00">12:00 pm</option>
+                                                        <option value="1:00">1:00 pm</option>
+                                                        <option value="2:00">2:00 pm</option>
+                                                        <option value="3:00">3:00 pm</option>
+                                                        <option value="4:00">4:00 pm</option>
+                                                        <option value="5:00">5:00 pm</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -224,13 +227,12 @@
                                             <div class="select1_wrapper">
                                                 <label>Services</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Services</option>
-                                                        <option value="0">Hair Styling</option>
-                                                        <option value="1">Face Mask</option>
-                                                        <option value="2">Shaving</option>
-                                                        <option value="3">Beard Triming</option>
-                                                        <option value="4">Hair Wash</option>
+                                                    <select class="select2 select" style="width: 100%" name="service_type">
+                                                        <option value="Hair Styling">Hair Styling</option>
+                                                        <option value="Face Mask">Face Mask</option>
+                                                        <option value="Shaving">Shaving</option>
+                                                        <option value="Beard Triming">Beard Triming</option>
+                                                        <option value="Hair Wash">Hair Wash</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -239,12 +241,10 @@
                                             <div class="select1_wrapper">
                                                 <label>Choose Barber</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Choose Barber</option>
-                                                        <option value="0">Philip</option>
-                                                        <option value="1">Stephen</option>
-                                                        <option value="2">Dennis</option>
-                                                        <option value="3">Helen</option>
+                                                    <select class="select2 select" style="width: 100%" name="barber_name">
+                                                        <option value="Kamji">Kamji</option>
+                                                        <option value="Joel">Joel</option>
+                                                        <option value="Katiria">Katiria</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -254,6 +254,7 @@
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                     </div>
