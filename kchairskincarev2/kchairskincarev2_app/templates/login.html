@@ -1,0 +1,28 @@
+{% extends "login-base.html" %}
+{% load widget_tweaks %}
+{% block content %}
+
+<section class="about section-padding bg-darkbrown">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-30 margin-adjust">
+                <div class="login-container">
+                    <h2 class="login-header">Log In</h2>
+                    <form method="POST" action="{% url 'login' %}" class="login-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.username|add_class:"form-input" }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.password|add_class:"form-input" }}
+                        </div>
+                        <a href="{% url 'home' %}" class="return-home-btn">Return To Home Page</a>
+                        <button type="submit" class="login-btn">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import CustomLoginView
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -18,4 +19,5 @@ urlpatterns = [
     path('blog2/', views.blog2, name='blog2'),
     path('blog3/', views.blog3, name='blog3'),
     path('contact/', views.contact, name='contact'),
+    path('login/', CustomLoginView.as_view(), name='login'),
 ]

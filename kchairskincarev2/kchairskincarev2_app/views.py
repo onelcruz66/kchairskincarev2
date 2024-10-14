@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import AppointmentRequest, MessageRequest
-from kchairskincarev2_app.forms import AppointmentForm, ContactForm
+from kchairskincarev2_app.forms import AppointmentForm, ContactForm, CustomAuthenticationForm, CreateUserForm
+from django.contrib.auth import views as auth_views
 
 # Create your views here.
 def home(request):
@@ -115,3 +116,10 @@ def contact(request):
     context['form'] = form
 
     return render(request, 'contact.html', context)
+
+def logout(request):
+    return redirect('login')
+
+class CustomLoginView(auth_views.LoginView):
+    template_name = 'login.html'
+    authentication_form = CustomAuthenticationForm
