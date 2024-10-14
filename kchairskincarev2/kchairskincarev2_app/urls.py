@@ -19,5 +19,7 @@ urlpatterns = [
     path('blog2/', views.blog2, name='blog2'),
     path('blog3/', views.blog3, name='blog3'),
     path('contact/', views.contact, name='contact'),
-    path('login/', CustomLoginView.as_view(), name='login'),
+    path('auth/login/', CustomLoginView.as_view(), name='login'),
+    path('auth/logout/', views.logout, name='logout'),
+    path("dashboard/", views.dashboard, name="dashboard"),
 ]

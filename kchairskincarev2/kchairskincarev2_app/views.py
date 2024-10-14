@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import AppointmentRequest, MessageRequest
 from kchairskincarev2_app.forms import AppointmentForm, ContactForm, CustomAuthenticationForm, CreateUserForm
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def home(request):
@@ -123,3 +124,8 @@ def logout(request):
 class CustomLoginView(auth_views.LoginView):
     template_name = 'login.html'
     authentication_form = CustomAuthenticationForm
+
+@login_required
+def dashboard(request):
+    context = {}
+    return render(request, 'dashboard.html', context)
