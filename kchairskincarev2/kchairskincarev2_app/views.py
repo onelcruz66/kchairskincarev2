@@ -129,3 +129,33 @@ class CustomLoginView(auth_views.LoginView):
 def dashboard(request):
     context = {}
     return render(request, 'dashboard.html', context)
+
+@login_required
+def requested_appointments(request):
+    context = {}
+    return render(request, 'requested-appointments.html', context)
+
+@login_required
+def approved_appointments(request):
+    context = {}
+    return render(request, 'approved-appointments.html', context)
+
+@login_required
+def message_requests(request):
+    context = {}
+    return render(request, 'message-requests.html', context)
+
+@login_required
+def register_user(request):
+    context = {}
+    return render(request, 'register-user.html', context)
+
+@login_required
+def email_subscribers(request):
+    context = {}
+    return render(request, 'email-subscribers.html', context)
+
+@login_required
+def contact_info(request):
+    context = {}
+    return render(request, 'contact-info.html', context)

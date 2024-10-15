@@ -1,1 +1,96 @@
-Hello World
+{% extends "admin-base.html" %}
+{% load widget_tweaks %}
+{% block content %}
+
+<section class="team section-padding pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-head text-center">
+                    <div class="section-subtitle">Employee Portal</div>
+                    <div class="section-title white">Dashboard</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="team-card mb-30">
+                        <div class="team-img"><img src="/static/img/requested_appointments.jpg" alt="" class="w-100"></div>
+                        <div class="team-content">
+                            <h3 class="team-title">Requested Appointments</h3>
+                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
+                            <a href="{% url 'requested_appointments' %}" class="button-1 mt-15">SELECT<span></span></a>
+                        </div>
+                        <div class="title-box">
+                            <h3 class="mb-0">Requested Appointments</h3>
+                        </div>
+                    </div>
+                    <div class="team-card mb-30">
+                        <div class="team-img"><img src="/static/img/approved_appointments.jpg" alt="" class="w-100"></div>
+                        <div class="team-content">
+                            <h3 class="team-title">Approved Appointments</h3>
+                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
+                            <a href="{% url 'approved_appointments' %}" class="button-1 mt-15">SELECT<span></span></a>
+                        </div>
+                        <div class="title-box">
+                            <h3 class="mb-0">Approved Appointments</h3>
+                        </div>
+                    </div>
+                    <div class="team-card mb-30">
+                        <div class="team-img"><img src="/static/img/register_user.jpg" alt="" class="w-100"></div>
+                        <div class="team-content">
+                            <h3 class="team-title">Register User</h3>
+                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
+                            <a href="{% url 'register_user' %}" class="button-1 mt-15">SELECT<span></span></a>
+                        </div>
+                        <div class="title-box">
+                            <h3 class="mb-0">Register User</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="team-card mb-30">
+                        <div class="team-img"><img src="/static/img/message_request.jpg" alt="" class="w-100"></div>
+                        <div class="team-content">
+                            <h3 class="team-title">Message Requests</h3>
+                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
+                            <a href="{% url 'message_requests' %}" class="button-1 mt-15">SELECT<span></span></a>
+                        </div>
+                        <div class="title-box">
+                            <h3 class="mb-0">Message Requests</h3>
+                        </div>
+                    </div>
+                    <div class="team-card mb-30">
+                        <div class="team-img"><img src="/static/img/email_subscribers.jpg" alt="" class="w-100"></div>
+                        <div class="team-content">
+                            <h3 class="team-title">Email Subscribers</h3>
+                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
+                            <a href="{% url 'email_subscribers' %}" class="button-1 mt-15">SELECT<span></span></a>
+                        </div>
+                        <div class="title-box">
+                            <h3 class="mb-0">Email Subscribers</h3>
+                        </div>
+                    </div>
+                    <div class="team-card mb-30">
+                        <div class="team-img"><img src="/static/img/client_info.jpg" alt="" class="w-100"></div>
+                        <div class="team-content">
+                            <h3 class="team-title">Contact Info</h3>
+                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
+                            <a href="{% url 'contact_info' %}" class="button-1 mt-15">SELECT<span></span></a>
+                        </div>
+                        <div class="title-box">
+                            <h3 class="mb-0">Contact Info</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

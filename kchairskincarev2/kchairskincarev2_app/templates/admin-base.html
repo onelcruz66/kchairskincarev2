@@ -43,86 +43,17 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'pricing' %}">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'requested_appointments' %}">Requested Appointments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'approved_appointments' %}">Approved Appointments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'message_requests' %}">Message Requests</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'register_user' %}">Register User</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div>{% block content %} {% endblock %}</div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="footer-column footer-contact">
-                            <h3 class="footer-title">Contact</h3>
-                            <p class="footer-contact-text">Ventana Al Mar
-                                <br>Rincon, Puerto Rico, 00677
-                            </p>
-                            <div class="footer-contact-info">
-                                <p class="footer-contact-phone">939-323-4537</p>
-                            </div>
-                            <div class="footer-about-social-list">
-                                <a href="https://www.facebook.com/KCaballeroBarber"><i class="ti-facebook"></i></a>
-                                <a href="https://www.instagram.com/kc.barbero"><i class="ti-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 offset-md-1">
-                        <div class="item opening">
-                            <h3 class="footer-title">Work Time</h3>
-                            <ul>
-                                <li>
-                                    <div class="tit">Monday</div>
-                                    <div class="dots"></div> <span>Appointment Only</span>
-                                </li>
-                                <li>
-                                    <div class="tit">Tuesday</div>
-                                    <div class="dots"></div> <span>9:00AM - 5:00PM</span>
-                                </li>
-                                <li>
-                                    <div class="tit">Thursday</div>
-                                    <div class="dots"></div> <span>9:00AM - 5:00PM</span>
-                                </li>
-                                <li>
-                                    <div class="tit">Friday</div>
-                                    <div class="dots"></div> <span>9:00AM - 5:00PM</span>
-                                </li>
-                                <li>
-                                    <div class="tit">Saturday</div>
-                                    <div class="dots"></div> <span>9:00AM - 5:00PM</span>
-                                </li>
-                                <li>
-                                    <div class="tit">Sunday</div>
-                                    <div class="dots"></div> <span>Appointment Only</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 offset-md-1">
-                        <div class="footer-column footer-explore clearfix">
-                            <h3 class="footer-title">Subscribe</h3>
-                            <div class="row subscribe">
-                                <div class="col-md-12">
-                                    <p>Subscribe to take advantage of our campaigns and gift certificates.</p>
-                                    <form>
-                                        <input type="text" name="search" placeholder="Your email" required>
-                                        <button>Subscribe</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
