@@ -1,0 +1,78 @@
+{% extends "admin-base.html" %}{% block title %}Requested Appointments{% endblock %}
+{% load widget_tweaks %}
+{% block content %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<section class="requested-appointment section-padding"> <!--pb-0-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-head text-center">
+                    <div class="section-title white">Requested Appointments</div>
+                    <button id="toggle-button" class="toggle-button">Show All Columns</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th class="name">Customer Name</th>
+                                <th class="phone_number">Phone Number</th>
+                                <th class="date_requested">Date Requested</th>
+                                <th class="time_requested">Time Requested</th>
+                                <th class="service_type">Service</th>
+                                <th class="barber_name">Barber Requested</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for appointment in requested_appointments %}
+                            <tr>
+                                <td class="name">{{ appointment.name }}</td>
+                                <td class="phone_number">{{ appointment.phone_number }}</td>
+                                <td class="date_requested">{{ appointment.date_requested }}</td>
+                                <td class="time_requested">{{ appointment.time_requested }}</td>
+                                <td class="service_type">{{ appointment.service_type }}</td>
+                                <td class="barber_name">{{ appointment.barber_name }}</td>
+                                <td>
+                                    <form method="post" action="{% url 'delete_appointment' appointment.id %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="delete-btn" name="delete-button">
+                                            <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                                        </button>
+                                    </form>
+                                    
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function() {
+        // Toggle functionality for the button
+        $("#toggle-button").click(function() {
+            $(".name, .phone_number, .date_requested, .time_requested, .service_type, .barber_name").toggle(); // Toggle visibility of specified columns
+            // Toggle button text
+            if ($(this).text() === "Show All Columns") {
+                $(this).text("Hide Some Columns");
+            } else {
+                $(this).text("Show All Columns");
+            }
+        });
+    
+        // Toggle individual columns by clicking the headers
+        $("th").click(function() {
+            var column = $("th").index(this) + 1; // Get column index +1 because nth-child is 1-based
+            $('td:nth-child(' + column + '),th:nth-child(' + column + ')').toggle(); // Toggle both header and cells
+        });
+    });
+</script>
+
+
+{% endblock %}

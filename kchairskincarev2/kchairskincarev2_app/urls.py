@@ -23,6 +23,7 @@ urlpatterns = [
     path('auth/logout/', views.logout, name='logout'),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("requested-appointments/", views.requested_appointments, name="requested_appointments"),
+    path("delete-appointment/<int:user_id>/", views.delete_appointment, name="delete_appointment"),
     path("approved-appointments/", views.approved_appointments, name="approved_appointments"),
     path("message-requests/", views.message_requests, name="message_requests"),
     path("register-user/", views.register_user, name="register_user"),

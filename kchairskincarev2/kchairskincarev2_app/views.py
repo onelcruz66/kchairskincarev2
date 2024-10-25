@@ -133,7 +133,20 @@ def dashboard(request):
 @login_required
 def requested_appointments(request):
     context = {}
+
+    try:
+        requested_appointments = AppointmentRequest.objects.order_by('date_requested')
+        context['requested_appointments'] = requested_appointments
+    except Exception as e:
+        return f"Error fetching records: {str(e)}"
+
     return render(request, 'requested-appointments.html', context)
+
+@login_required
+def delete_appointment(request, user_id):
+    appointment = AppointmentRequest.objects.get(pk=user_id)
+    appointment.delete()
+    return redirect('requested_appointments')
 
 @login_required
 def approved_appointments(request):

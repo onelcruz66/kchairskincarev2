@@ -1,0 +1,114 @@
+/* General table styling */
+#data-table {
+    width: 95%; /* Adjusted to leave some space on the right */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    margin-left: 20px; /* Moves the table slightly to the left */
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark background */
+    background-color: #333; /* Dark background for table */
+    color: #f4f4f4; /* Light text for better contrast */
+}
+
+/* Table headers */
+#data-table thead th {
+    background-color: #444; /* Darker gray header for contrast */
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #555; /* Slightly darker border */
+}
+
+/* Table rows */
+#data-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #555; /* Darker border to match the theme */
+}
+
+/* Hover effect on rows */
+#data-table tbody tr:hover {
+    background-color: #555; /* Darker hover effect */
+    cursor: pointer;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 768px) {
+    #data-table, #data-table thead, #data-table tbody, #data-table th, #data-table td, #data-table tr {
+        display: block;
+    }
+
+    #data-table thead {
+        display: none;
+    }
+
+    #data-table tbody tr {
+        margin-bottom: 10px;
+        border: 1px solid #555;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    #data-table tbody td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    #data-table tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        top: 10px;
+        font-weight: bold;
+        padding-right: 10px;
+        text-align: left;
+        color: #ccc; /* Slightly lighter label text */
+    }
+}
+.requested-appointment {
+    position: relative;
+}
+
+.requested-appointment:before {
+    top: auto;
+    bottom: 0;
+    height: 40%;
+    background: #f5eee7;
+}
+/* #f5eee7 */
+.requested-appointment:after,
+.requested-appointment:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    background: #14100c;
+    z-index: -1;
+}
+.requested-appointment:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    background: #14100c;
+    z-index: -1;
+}
